@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+.page-main-style{
+	width:800px;
+	margin:0 auto;/*중앙 정렬*/
+}
+.result-display{
+	width:400px;
+	margin:100px auto;
+	border:1px solid #000;
+	padding:100px 0 100px 0;/*상우하좌*/
+	text-align:center;/*글자 가운데 정렬*/
+}
+.align-center{
+	text-align:center;
+}
+.align-right{
+	text-align:right;
+}
+/*목록*/
+table{
+	width:100%;
+	margin-top:5px;
+	border:1px solid #000;
+	border-collapse:collapse;
+}
+table td, table th{
+	border:1px solid #000;
+	padding:5px;
+}
+/*등록, 수정 폼*/
+form{
+	width:500px;
+	margin:0 auto;
+	border:1px solid #000;
+	padding:10px 10px 10px 30px;
+}
+ul{
+	list-style:none;
+}
+label{
+	width:100px;
+	float:left;/*태그를 왼쪽으로 정렬*/
+}
+.error-color{
+	color:red;
+}
+
+
+
+
+
+
+
+
+
+
+
+

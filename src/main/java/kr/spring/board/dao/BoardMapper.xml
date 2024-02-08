@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper   
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="kr.spring.board.dao.BoardMapper">  
+  	<!-- 목록 -->                
+  	<select id="getBoardList" parameterType="map"
+  	                                resultType="boardVO">
+  		SELECT 
+           *
+         FROM was_db.mboard
+         ORDER BY num desc limit #{start}, #{rowCount}
+  	</select>
+ 	
+ 	<!-- 글쓰기 -->
+ 	<insert id="insertBoard" parameterType="boardVO">
+ 		INSERT INTO was_db.mboard (
+ 		   writer,
+ 		   title,
+ 		   passwd,
+ 		   content,
+ 		   reg_date)
+ 		VALUES (
+ 			#{writer},
+ 			#{title},
+ 			#{passwd},
+ 			#{content},
+ 			now())
+ 	</insert>
+ 	
+ 	<!-- 글 삭제 -->
+ 	<delete id="deleteBoard" parameterType="integer">
+ 		DELETE FROM was_db.mboard
+ 		WHERE num=#{num}
+ 	</delete>
+ 	
+</mapper>
+
+
+
+
+
+
+
